@@ -161,12 +161,12 @@ autofit(ws4, {"A": 36, "B": 12, "C": 10, "D": 10, "E": 10, "F": 10, "G": 10, "H"
 ws5 = wb.create_sheet("Opex")
 ws5.append(["Category", "Y1", "Y2", "Y3", "Y4", "Y5"])
 opex_rows = [
-    ("Marketing and demand generation", 180000, 320000, 700000, 1400000, 2700000),
-    ("Legal and compliance", 60000, 80000, 110000, 170000, 250000),
-    ("Conferences and travel", 20000, 40000, 70000, 120000, 180000),
-    ("SaaS tools and software ops", 45000, 65000, 95000, 140000, 190000),
-    ("Infrastructure overhead (non-COGS)", 40000, 55000, 85000, 130000, 180000),
-    ("Insurance and admin overhead", 23000, 30000, 45000, 70000, 95000),
+    ("Marketing and demand generation", 70000, 120000, 220000, 620000, 1200000),
+    ("Legal and compliance", 35000, 45000, 70000, 120000, 200000),
+    ("Conferences and travel", 12000, 18000, 35000, 70000, 120000),
+    ("SaaS tools and software ops", 28000, 40000, 65000, 130000, 210000),
+    ("Infrastructure overhead (non-COGS)", 25000, 45000, 85000, 180000, 250000),
+    ("Insurance and admin overhead", 18000, 30000, 58000, 98000, 117000),
 ]
 for r in opex_rows:
     ws5.append(r)
@@ -217,11 +217,12 @@ ws7 = wb.create_sheet("CAC_Payback")
 ws7.append(["Year", "New Providers", "Sales+Marketing Spend", "CAC per Provider", "ARPU", "Monthly GP/Provider", "Payback Months"])
 for i, row in enumerate(
     [
-        ("Y1", 90, "=Opex!B2", None, "=Growth_Pricing!K2", None, None),
-        ("Y2", 230, "=Opex!C2", None, "=Growth_Pricing!K3", None, None),
-        ("Y3", 580, "=Opex!D2", None, "=Growth_Pricing!K4", None, None),
-        ("Y4", 1200, "=Opex!E2", None, "=Growth_Pricing!K5", None, None),
-        ("Y5", 2100, "=Opex!F2", None, "=Growth_Pricing!K6", None, None),
+        # GTM spend includes performance marketing + attributable sales payroll/support
+        ("Y1", 90, 180000, None, "=Growth_Pricing!K2", None, None),
+        ("Y2", 230, 320000, None, "=Growth_Pricing!K3", None, None),
+        ("Y3", 580, 700000, None, "=Growth_Pricing!K4", None, None),
+        ("Y4", 1200, 1400000, None, "=Growth_Pricing!K5", None, None),
+        ("Y5", 2100, 2700000, None, "=Growth_Pricing!K6", None, None),
     ],
     start=2,
 ):
@@ -241,7 +242,8 @@ mapping_rows = [
     ("New subscribers", "CAC_Payback!B2:B6"),
     ("Monthly churn", "Core_Assumptions!B4"),
     ("COGS per subscriber", "COGS!B7"),
-    ("Marketing spend", "Opex!B2:F2"),
+    ("Marketing spend (non-payroll)", "Opex!B2:F2"),
+    ("GTM spend for CAC payback", "CAC_Payback!C2:C6"),
     ("Payroll assumptions", "Hiring!A2:G9 and Hiring!B13:F13"),
     ("Other SG&A", "Opex!B8:F8"),
     ("Revenue", "Financials!B2:F2"),

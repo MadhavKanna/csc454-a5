@@ -10,167 +10,40 @@
 \pgfplotsset{compat=1.18}
 \sisetup{group-separator={,}, round-mode=places, round-precision=2}
 
-\title{RailGuard Health: 5-Year SaaS Financial Model Inputs\\(SmartHelping Template Ready)}
-\author{CSC454 Assignment 5}
+\title{Team RailGuard\_Assignment5\\Financial Modeling and Projections}
+\author{RailGuard Health}
 \date{March 13, 2026}
 
 \begin{document}
 \maketitle
 
-\noindent\textbf{Currency:} CAD unless noted. \textbf{Market focus:} Canada first, US expansion starting Year 4. \textbf{Model posture:} venture-backed, aggressive growth, moderate healthcare sales cycle.
+\noindent\textbf{Startup context.} RailGuard Health is an EMR-embedded clinical workflow AI platform for outpatient clinics. The product automates documentation, coding/billing optimization, compliance checks, and follow-up tasks through SMART on FHIR integration.  
+\textbf{Model scope.} This is a 5-year forecast for a venture-backed B2B SaaS business, expressed in CAD and structured to align with the assignment handout (Part 1: Cost-Revenue Model, Part 2: Financial Statements, Part 3: Financial Analysis).
 
-\section*{1. Core Financial Assumptions}
-\begin{longtable}{p{0.38\textwidth} p{0.16\textwidth} p{0.40\textwidth}}
-\toprule
-\textbf{Variable} & \textbf{Value} & \textbf{Justification} \\
-\midrule
-Monthly blended ARPU (Y1--Y5) & 244, 259, 274, 287, 299 & Falls inside AI scribe market range; increases as billing/compliance features and enterprise controls expand. \\
-Average providers per clinic & 4.2 & Matches target of small/medium outpatient clinics (1--10 clinicians). \\
-Monthly logo churn & 1.8\% (Y1), 1.6\% (Y2), 1.4\% (Y3+)& Sticky workflow software once embedded into EMR operations. \\
-Gross margin target & 80\%+ by Y3 & Healthcare SaaS target with improving inference efficiency and stable hosting costs. \\
-CAC per new provider & 2,000 (Y1) down to 1,167 (Y4) & EMR-linked sales requires pilots and implementation support early, then referral and partner leverage. \\
-Implementation fee per new clinic & 1,500 (Y1--Y2), 2,000 (Y3--Y5) & One-time onboarding/training/configuration revenue. \\
-Sales cycle length & 2--4 months & Typical for outpatient clinics buying compliance-sensitive software. \\
-Capex & 180k, 220k, 280k, 350k, 420k & Security, platform reliability, and analytics infrastructure scaling. \\
-\bottomrule
-\end{longtable}
+\section*{Introduction}
+RailGuard's thesis is that physician administrative overload is a persistent and monetizable pain point. The venture targets clinics with 1--10 clinicians, where buying cycles are shorter than hospitals and integration complexity is lower. The model assumes a Canada-first launch with US channel expansion beginning in Year 4.
 
-\section*{2. Customer Growth Model (Providers Subscribed)}
+Financially, the plan follows a typical healthcare SaaS pattern: heavy product and integration investment in Years 1--3, then operating leverage in Years 4--5 once onboarding playbooks, compliance workflows, and sales motion become repeatable. Revenue growth is driven by provider-seat expansion, modest ARPU lift from plan mix changes, and small implementation fees per clinic.
+
+\section*{Part 1: Cost-Revenue Models}
+\subsection*{1. Product Roadmap (5 Years)}
 \begin{center}
-\begin{tabular}{lrrrr}
+\begin{tabular}{p{0.1\textwidth} p{0.46\textwidth} p{0.36\textwidth}}
 \toprule
-\textbf{Year} & \textbf{Clinics (EOY)} & \textbf{Providers (EOY)} & \textbf{Providers (Avg Active)} & \textbf{Provider Growth} \\
+\textbf{Year} & \textbf{Roadmap Milestone} & \textbf{Revenue Linkage} \\
 \midrule
-Y1 & 22 & 90 & 70 & -- \\
-Y2 & 76 & 320 & 260 & 255.6\% \\
-Y3 & 214 & 900 & 760 & 181.3\% \\
-Y4 & 500 & 2,100 & 1,850 & 133.3\% \\
-Y5 & 980 & 4,200 & 3,700 & 100.0\% \\
+Y1 & MVP launch: ambient transcription, structured note generation, clinician review loop, baseline EMR write-back & Enables paid pilots and first clinic contracts \\
+Y2 & Advanced integrations and coding optimization: richer FHIR mappings, billing/coding suggestions, audit support & Improves conversion from pilot to paid annual contracts \\
+Y3 & Automation and scale: follow-up task generation, compliance validation, standardized onboarding toolkit & Increases deployment velocity and lowers churn \\
+Y4 & Enterprise clinic package: SSO, role-based controls, admin dashboards, multi-site support & Unlocks larger clinic group contracts and higher ARPU mix \\
+Y5 & Hospital deployment readiness: governance, analytics, enterprise workflows & Expands TAM beyond small clinics into higher ACV accounts \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\noindent\textbf{Adoption drivers:} (1) EMR marketplace visibility and integrations, (2) physician referrals from pilot clinics, (3) faster onboarding playbooks by Y3, (4) US partner channels starting Y4.
+\subsection*{2. Hiring Plan and Salary Assumptions}
+Hiring is synchronized with the roadmap: engineering hires precede major feature releases, while GTM and customer success scale after integration repeatability is proven. Salary levels are benchmarked to Canadian startup norms for technical and commercial roles.
 
-\begin{figure}[h]
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-    width=0.8\textwidth,
-    height=0.32\textwidth,
-    xlabel={Year},
-    ylabel={Providers (EOY)},
-    symbolic x coords={Y1,Y2,Y3,Y4,Y5},
-    xtick=data,
-    ymin=0,
-    ymax=4500,
-    ymajorgrids=true
-]
-\addplot+[mark=*] coordinates {(Y1,90) (Y2,320) (Y3,900) (Y4,2100) (Y5,4200)};
-\end{axis}
-\end{tikzpicture}
-\caption{Provider Growth Trajectory}
-\end{figure}
-
-\section*{3. Pricing Model}
-\begin{center}
-\begin{tabular}{p{0.2\textwidth} p{0.2\textwidth} p{0.5\textwidth}}
-\toprule
-\textbf{Plan} & \textbf{Price (per provider/month)} & \textbf{Key Features} \\
-\midrule
-Basic & 199 & Transcription, structured notes, EMR write-back \\
-Professional & 299 & Billing optimization, coding support, compliance validation \\
-Enterprise & 399 & Advanced analytics, admin controls, multi-site governance \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\begin{center}
-\begin{tabular}{lcc}
-\toprule
-\textbf{Year} & \textbf{Plan Mix (B/P/E)} & \textbf{Blended ARPU} \\
-\midrule
-Y1 & 60\% / 35\% / 5\% & 244 \\
-Y2 & 50\% / 40\% / 10\% & 259 \\
-Y3 & 40\% / 45\% / 15\% & 274 \\
-Y4 & 32\% / 48\% / 20\% & 287 \\
-Y5 & 25\% / 50\% / 25\% & 299 \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\section*{4. Revenue Projections}
-\[
-\text{Annual Revenue} = (\text{Avg Active Providers} \times \text{ARPU} \times 12) + \text{Implementation Fees}
-\]
-
-\begin{center}
-\begin{tabular}{lrrrr}
-\toprule
-\textbf{Year} & \textbf{Avg Providers} & \textbf{ARPU} & \textbf{Subscription Revenue} & \textbf{Total Revenue} \\
-\midrule
-Y1 & 70 & 244 & 204,960 & 234,960 \\
-Y2 & 260 & 259 & 808,080 & 888,080 \\
-Y3 & 760 & 274 & 2,498,880 & 2,718,880 \\
-Y4 & 1,850 & 287 & 6,368,400 & 6,868,400 \\
-Y5 & 3,700 & 299 & 13,275,600 & 14,275,600 \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\begin{figure}[h]
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-    width=0.85\textwidth,
-    height=0.35\textwidth,
-    ybar,
-    bar width=18pt,
-    ylabel={Revenue (CAD millions)},
-    symbolic x coords={Y1,Y2,Y3,Y4,Y5},
-    xtick=data,
-    nodes near coords,
-    ymin=0,
-    enlarge x limits=0.15
-]
-\addplot coordinates {(Y1,0.235) (Y2,0.888) (Y3,2.719) (Y4,6.868) (Y5,14.276)};
-\end{axis}
-\end{tikzpicture}
-\caption{Total Revenue Growth}
-\end{figure}
-
-\section*{5. Cost of Goods Sold (COGS)}
-\begin{center}
-\begin{tabular}{p{0.5\textwidth} r}
-\toprule
-\textbf{Cost Component} & \textbf{Cost per Provider / Month} \\
-\midrule
-LLM inference and clinical summarization & 24 \\
-Cloud hosting and networking & 11 \\
-Storage, audit logs, and security retention & 5 \\
-Support and implementation servicing & 8 \\
-Payment processing and marketplace fees & 6 \\
-\midrule
-\textbf{Total COGS per provider / month} & \textbf{54} \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\begin{center}
-\begin{tabular}{lrrr}
-\toprule
-\textbf{Year} & \textbf{Revenue} & \textbf{COGS} & \textbf{Gross Margin} \\
-\midrule
-Y1 & 234,960 & 45,360 & 80.7\% \\
-Y2 & 888,080 & 168,480 & 81.0\% \\
-Y3 & 2,718,880 & 492,480 & 81.9\% \\
-Y4 & 6,868,400 & 1,198,800 & 82.5\% \\
-Y5 & 14,275,600 & 2,397,600 & 83.2\% \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\section*{6. 5-Year Hiring Plan}
 \begin{center}
 \begin{tabular}{lrrrrrr}
 \toprule
@@ -190,91 +63,165 @@ Customer Success/Implementation & 95k & 0 & 1 & 2 & 5 & 7 \\
 \end{tabular}
 \end{center}
 
-\noindent\textbf{Hiring logic:} engineering-heavy through Y3 for integrations and model reliability, then GTM and customer success expansion in Y4--Y5 to scale clinic acquisition and retention.
+\subsection*{3. Operating Cost Model (COGS and SG\&A)}
+\textbf{COGS} includes variable delivery costs tied to active providers. \textbf{SG\&A} includes payroll and non-payroll operating overhead required to execute product, sales, and compliance.
 
-\section*{7. Operating Expenses (Non-COGS, Non-Payroll)}
+\begin{center}
+\begin{tabular}{p{0.52\textwidth} r}
+\toprule
+\textbf{COGS Component} & \textbf{Cost per Provider / Month} \\
+\midrule
+LLM inference and clinical summarization & 24 \\
+Cloud hosting and networking & 11 \\
+Storage, audit logs, and security retention & 5 \\
+Support and implementation servicing & 8 \\
+Payment processing and marketplace fees & 6 \\
+\midrule
+\textbf{Total COGS per Provider / Month} & \textbf{54} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
 \begin{center}
 \begin{tabular}{lrrrrr}
 \toprule
 \textbf{Category} & \textbf{Y1} & \textbf{Y2} & \textbf{Y3} & \textbf{Y4} & \textbf{Y5} \\
 \midrule
-Marketing and demand generation & 180,000 & 320,000 & 700,000 & 1,400,000 & 2,700,000 \\
-Legal and compliance & 60,000 & 80,000 & 110,000 & 170,000 & 250,000 \\
-Conferences and travel & 20,000 & 40,000 & 70,000 & 120,000 & 180,000 \\
-SaaS tools and software ops & 45,000 & 65,000 & 95,000 & 140,000 & 190,000 \\
-Infrastructure overhead (non-COGS) & 40,000 & 55,000 & 85,000 & 130,000 & 180,000 \\
-Insurance and admin overhead & 23,000 & 30,000 & 45,000 & 70,000 & 95,000 \\
+Payroll (incl. 18\% burden) & 1,062,000 & 1,652,000 & 2,567,000 & 3,682,000 & 5,003,000 \\
+Marketing and demand generation & 70,000 & 120,000 & 220,000 & 620,000 & 1,200,000 \\
+Legal and compliance & 35,000 & 45,000 & 70,000 & 120,000 & 200,000 \\
+Conferences and travel & 12,000 & 18,000 & 35,000 & 70,000 & 120,000 \\
+SaaS tools and software operations & 28,000 & 40,000 & 65,000 & 130,000 & 210,000 \\
+Infrastructure overhead (non-COGS) & 25,000 & 45,000 & 85,000 & 180,000 & 250,000 \\
+Insurance and administration & 18,000 & 30,000 & 58,000 & 98,000 & 117,000 \\
 \midrule
-\textbf{Total Non-Payroll Opex} & \textbf{368,000} & \textbf{590,000} & \textbf{1,105,000} & \textbf{2,030,000} & \textbf{3,595,000} \\
+\textbf{Total SG\&A} & \textbf{1,250,000} & \textbf{1,950,000} & \textbf{3,100,000} & \textbf{4,900,000} & \textbf{7,100,000} \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\section*{8. CAC Payback}
+\subsection*{4. Market Analysis and Per-User Economics}
+RailGuard uses a bottom-up market approach based on physicians and provider-seat pricing.
+
+\begin{center}
+\begin{tabular}{p{0.36\textwidth} p{0.56\textwidth}}
+\toprule
+\textbf{Metric} & \textbf{Estimate and Logic} \\
+\midrule
+TAM (all physicians) & 99,555 physicians $\times$ 3,588 annual ARPU (Y5) $\approx$ CAD 357M ARR-equivalent \\
+SAM (target outpatient subset) & 35\% of physician base (small/medium outpatient focus) $\approx$ 34,844 providers; CAD 125M ARR-equivalent \\
+SOM by Y5 & 4,200 providers (12.1\% of SAM providers), CAD 15.1M ARR-equivalent \\
+Pricing benchmarks & AI scribe market commonly in low hundreds per provider/month; RailGuard price ladder sits in this band but supports premium via workflow automation beyond note generation \\
+Sales cycle assumption & 2--4 months from pilot start to paid conversion in clinic segment \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Competitive context from Assignment 4 remains unchanged: RailGuard competes against scribe-centric tools (e.g., Nuance DAX and similar products), native EMR capabilities, and workflow automation startups. The differentiation is end-to-end workflow execution with clinician-in-the-loop verification, not transcription alone.
+
+\subsection*{5. Revenue Model}
+\begin{center}
+\begin{tabular}{p{0.2\textwidth} p{0.2\textwidth} p{0.5\textwidth}}
+\toprule
+\textbf{Plan} & \textbf{Price (per provider/month)} & \textbf{Core Features} \\
+\midrule
+Basic & 199 & Transcription, structured notes, baseline EMR write-back \\
+Professional & 299 & Billing optimization, coding support, compliance validation \\
+Enterprise & 399 & Advanced analytics, multi-site controls, enterprise administration \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Year} & \textbf{Plan Mix (B/P/E)} & \textbf{Blended ARPU} \\
+\midrule
+Y1 & 60\% / 35\% / 5\% & 244 \\
+Y2 & 50\% / 40\% / 10\% & 259 \\
+Y3 & 40\% / 45\% / 15\% & 274 \\
+Y4 & 32\% / 48\% / 20\% & 287 \\
+Y5 & 25\% / 50\% / 25\% & 299 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Year} & \textbf{Clinics (EOY)} & \textbf{Providers (EOY)} & \textbf{Providers (Avg Active)} & \textbf{Provider Growth} \\
+\midrule
+Y1 & 22 & 90 & 70 & -- \\
+Y2 & 76 & 320 & 260 & 255.6\% \\
+Y3 & 214 & 900 & 760 & 181.3\% \\
+Y4 & 500 & 2,100 & 1,850 & 133.3\% \\
+Y5 & 980 & 4,200 & 3,700 & 100.0\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
 \[
-\text{CAC Payback (months)} = \frac{\text{CAC per new provider}}{\text{Monthly Gross Profit per provider}}
-\]
-\[
-\text{Monthly Gross Profit per provider} = \text{ARPU} - \text{COGS per provider/month}
+\text{Total Revenue} = (\text{Avg Providers}\times\text{ARPU}\times12) + \text{Implementation Fees}
 \]
 
 \begin{center}
 \begin{tabular}{lrrrr}
 \toprule
-\textbf{Year} & \textbf{CAC / New Provider} & \textbf{ARPU} & \textbf{Monthly Gross Profit} & \textbf{Payback (months)} \\
+\textbf{Year} & \textbf{Subscription Revenue} & \textbf{Implementation Revenue} & \textbf{Total Revenue} & \textbf{YoY Growth} \\
 \midrule
-Y1 & 2,000 & 244 & 190 & 10.5 \\
-Y2 & 1,391 & 259 & 205 & 6.8 \\
-Y3 & 1,207 & 274 & 220 & 5.5 \\
-Y4 & 1,167 & 287 & 233 & 5.0 \\
-Y5 & 1,286 & 299 & 245 & 5.2 \\
+Y1 & 204,960 & 30,000 & 234,960 & -- \\
+Y2 & 808,080 & 80,000 & 888,080 & 277.9\% \\
+Y3 & 2,498,880 & 220,000 & 2,718,880 & 206.1\% \\
+Y4 & 6,368,400 & 500,000 & 6,868,400 & 152.6\% \\
+Y5 & 13,275,600 & 1,000,000 & 14,275,600 & 107.8\% \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\begin{figure}[h]
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-    width=0.8\textwidth,
-    height=0.32\textwidth,
-    xlabel={Year},
-    ylabel={CAC Payback (months)},
-    symbolic x coords={Y1,Y2,Y3,Y4,Y5},
-    xtick=data,
-    ymin=0,
-    ymax=12,
-    ymajorgrids=true
-]
-\addplot+[mark=square*, color=red] coordinates {(Y1,10.5) (Y2,6.8) (Y3,5.5) (Y4,5.0) (Y5,5.2)};
-\end{axis}
-\end{tikzpicture}
-\caption{CAC Payback Improvement}
-\end{figure}
-
-\section*{9. Break-Even Analysis}
+\section*{Part 2: Financial Statements (Forecasts)}
+\subsection*{1. Income Statement (Simplified, Annual)}
 \begin{center}
 \begin{tabular}{lrrrrr}
 \toprule
-\textbf{Year} & \textbf{Revenue} & \textbf{COGS} & \textbf{SG\&A} & \textbf{EBITDA} & \textbf{EBITDA Margin} \\
+\textbf{Metric} & \textbf{Y1} & \textbf{Y2} & \textbf{Y3} & \textbf{Y4} & \textbf{Y5} \\
 \midrule
-Y1 & 234,960 & 45,360 & 1,250,000 & -1,060,400 & -451.3\% \\
-Y2 & 888,080 & 168,480 & 1,950,000 & -1,230,400 & -138.5\% \\
-Y3 & 2,718,880 & 492,480 & 3,100,000 & -873,600 & -32.1\% \\
-Y4 & 6,868,400 & 1,198,800 & 4,900,000 & 769,600 & 11.2\% \\
-Y5 & 14,275,600 & 2,397,600 & 7,100,000 & 4,778,000 & 33.5\% \\
+Revenue & 234,960 & 888,080 & 2,718,880 & 6,868,400 & 14,275,600 \\
+COGS & 45,360 & 168,480 & 492,480 & 1,198,800 & 2,397,600 \\
+Gross Profit & 189,600 & 719,600 & 2,226,400 & 5,669,600 & 11,878,000 \\
+Gross Margin & 80.7\% & 81.0\% & 81.9\% & 82.5\% & 83.2\% \\
+SG\&A & 1,250,000 & 1,950,000 & 3,100,000 & 4,900,000 & 7,100,000 \\
+EBITDA & -1,060,400 & -1,230,400 & -873,600 & 769,600 & 4,778,000 \\
+EBITDA Margin & -451.3\% & -138.5\% & -32.1\% & 11.2\% & 33.5\% \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\noindent\textbf{Break-even point:} EBITDA turns positive in \textbf{Year 4}.\\
-\textbf{Sensitivity:} if provider adoption is 20\% lower than plan, break-even shifts from Y4 to Y5. If ARPU is 10\% below plan, CAC payback worsens by roughly 0.7--1.0 months.
+\noindent\textbf{Investor inference.} RailGuard shows classic healthcare SaaS front-loaded losses, followed by operating leverage once clinic onboarding scales. Gross margin is healthy throughout and improves modestly. EBITDA turns positive in Y4, signaling that scale economics are feasible if growth assumptions hold.
 
+\subsection*{2. Cash Flow Statement (Simplified, Annual)}
+\begin{center}
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Metric} & \textbf{Y1} & \textbf{Y2} & \textbf{Y3} & \textbf{Y4} & \textbf{Y5} \\
+\midrule
+EBITDA & -1,060,400 & -1,230,400 & -873,600 & 769,600 & 4,778,000 \\
+Capex & 180,000 & 220,000 & 280,000 & 350,000 & 420,000 \\
+Net Cash Flow (pre-financing) & -1,240,400 & -1,450,400 & -1,153,600 & 419,600 & 4,358,000 \\
+Financing Inflow & 1,500,000 & 1,800,000 & 2,000,000 & 0 & 0 \\
+Ending Cash Balance & 459,600 & 809,200 & 1,655,600 & 2,075,200 & 6,433,200 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\textbf{Funding requirement.} Cumulative pre-financing burn through Y3 is CAD 3.84M. With execution buffer and timing risk, a practical requirement is roughly CAD 5.0--5.5M total external capital to safely reach sustained break-even.
+
+\section*{Part 3: Financial Analysis}
+\subsection*{1. Annual Revenue vs EBITDA}
 \begin{figure}[h]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    width=0.8\textwidth,
+    width=0.84\textwidth,
     height=0.32\textwidth,
     xlabel={Year},
     ylabel={CAD millions},
@@ -290,14 +237,17 @@ Y5 & 14,275,600 & 2,397,600 & 7,100,000 & 4,778,000 & 33.5\% \\
 \legend{Revenue, EBITDA}
 \end{axis}
 \end{tikzpicture}
-\caption{Revenue vs EBITDA}
+\caption{Annual Revenue and EBITDA}
 \end{figure}
 
+This graph shows the J-curve expected in early-stage SaaS: revenue compounds while EBITDA lags until fixed costs are absorbed. The key driver is provider adoption velocity; if growth falls materially below plan, EBITDA inflection shifts right.
+
+\subsection*{2. Net/Gross Margin Analysis}
 \begin{figure}[h]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    width=0.8\textwidth,
+    width=0.84\textwidth,
     height=0.32\textwidth,
     xlabel={Year},
     ylabel={Margin (\%)},
@@ -316,11 +266,14 @@ Y5 & 14,275,600 & 2,397,600 & 7,100,000 & 4,778,000 & 33.5\% \\
 \caption{Gross Margin vs EBITDA Margin}
 \end{figure}
 
+Gross margin remains strong due software economics and efficient COGS control. EBITDA margin improves sharply once SG\&A scales slower than revenue. This spread is a central investor signal for capital efficiency.
+
+\subsection*{3. Cash Balance Over Time}
 \begin{figure}[h]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    width=0.8\textwidth,
+    width=0.84\textwidth,
     height=0.32\textwidth,
     xlabel={Year},
     ylabel={Ending Cash (CAD millions)},
@@ -336,27 +289,87 @@ Y5 & 14,275,600 & 2,397,600 & 7,100,000 & 4,778,000 & 33.5\% \\
 \caption{Cash Balance Over Time}
 \end{figure}
 
-\section*{10. SmartHelping Excel Template Mapping}
+Cash remains positive under planned financing timing. The primary risk is fundraising slippage in Y2--Y3 while the company is still pre-EBITDA break-even.
+
+\subsection*{4. Annual Subscriber Growth (Providers)}
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.84\textwidth,
+    height=0.32\textwidth,
+    xlabel={Year},
+    ylabel={Providers (EOY)},
+    symbolic x coords={Y1,Y2,Y3,Y4,Y5},
+    xtick=data,
+    ymin=0,
+    ymax=4500,
+    ymajorgrids=true
+]
+\addplot+[mark=*] coordinates {(Y1,90) (Y2,320) (Y3,900) (Y4,2100) (Y5,4200)};
+\end{axis}
+\end{tikzpicture}
+\caption{Annual Provider Growth}
+\end{figure}
+
+Provider growth is the dominant top-line driver. The model assumes stronger partner/referral flywheel effects after Y2; this is a high-sensitivity assumption and should be tracked monthly against actual conversion cohorts.
+
+\subsection*{5. CAC Payback}
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.84\textwidth,
+    height=0.32\textwidth,
+    xlabel={Year},
+    ylabel={CAC Payback (months)},
+    symbolic x coords={Y1,Y2,Y3,Y4,Y5},
+    xtick=data,
+    ymin=0,
+    ymax=12,
+    ymajorgrids=true
+]
+\addplot+[mark=square*, color=red] coordinates {(Y1,10.5) (Y2,6.8) (Y3,5.5) (Y4,5.0) (Y5,5.2)};
+\end{axis}
+\end{tikzpicture}
+\caption{CAC Payback Period}
+\end{figure}
+
+Payback improves as implementation becomes standardized and brand trust reduces sales friction. A slight Y5 increase reflects entry into larger accounts with longer procurement cycles.
+
+\subsection*{Risk and Sensitivity Discussion}
+Three variables most threaten viability over five years:
+\begin{itemize}
+\item \textbf{Adoption velocity risk:} if provider adoption is 20\% below plan, break-even shifts from Y4 toward Y5.
+\item \textbf{Pricing pressure risk:} if blended ARPU is 10\% lower (competitive discounting), EBITDA compression is significant in Y3--Y4.
+\item \textbf{Integration/compliance risk:} delays in EMR integrations or privacy/compliance approvals can increase CAC and extend sales cycle.
+\end{itemize}
+On balance, the model appears fundable if early milestones are met: gross margin above 78\%, CAC payback below 9 months by Y2, and measurable pilot-to-paid conversion in target clinics.
+
+\section*{Conclusion}
+RailGuard's financial outlook is credible for an early-stage healthtech SaaS venture: front-loaded investment, increasing gross margin, and EBITDA positivity in Y4 under base-case assumptions. The model supports a staged financing strategy and offers an investor-readable path from pilot traction to scalable clinic penetration. The biggest execution requirement is disciplined conversion from integration work into repeatable, low-friction deployment and retention.
+
+\section*{Appendix: SmartHelping Template Input Mapping}
 \begin{center}
 \begin{tabular}{p{0.46\textwidth} p{0.42\textwidth}}
 \toprule
-\textbf{Template Section} & \textbf{Input Value to Enter} \\
+\textbf{Template Section} & \textbf{Input Value} \\
 \midrule
-Pricing assumptions (monthly ARPU) & 244, 259, 274, 287, 299 by year \\
-Subscriber growth assumptions & Avg providers: 70, 260, 760, 1,850, 3,700 \\
-New subscribers for CAC sheet & 90, 230, 580, 1,200, 2,100 \\
-Monthly churn assumption & 1.8\%, 1.6\%, 1.4\%, 1.4\%, 1.4\% \\
-COGS per subscriber/month & 54 \\
-Annual marketing spend & 180k, 320k, 700k, 1.4M, 2.7M \\
-Payroll assumptions & Role-level headcount and salaries from Section 6 \\
-Other SG\&A assumptions & Section 7 category totals \\
-Capex / cash flow assumptions & 180k, 220k, 280k, 350k, 420k \\
-EBITDA check & -1.06M, -1.23M, -0.87M, +0.77M, +4.78M \\
+Monthly ARPU assumptions & 244, 259, 274, 287, 299 \\
+Monthly churn assumptions & 1.8\%, 1.6\%, 1.4\%, 1.4\%, 1.4\% \\
+Avg active providers & 70, 260, 760, 1,850, 3,700 \\
+New providers (CAC rows) & 90, 230, 580, 1,200, 2,100 \\
+COGS per provider per month & 54 \\
+Annual SG\&A totals & 1.25M, 1.95M, 3.10M, 4.90M, 7.10M \\
+Capex assumptions & 180k, 220k, 280k, 350k, 420k \\
+Financing assumptions & 1.50M, 1.80M, 2.00M, 0, 0 \\
+Revenue check & 0.235M, 0.888M, 2.719M, 6.868M, 14.276M \\
+EBITDA check & -1.060M, -1.230M, -0.874M, 0.770M, 4.778M \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\section*{References for Assumption Ranges}
+\section*{References}
 \begin{itemize}
 \item \url{https://www.cihi.ca/en/physicians-in-canada}
 \item \url{https://www.ontariomd.ca/pages/ai-scribes-final-report.aspx}
