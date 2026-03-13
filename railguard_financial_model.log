@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  13 MAR 2026 18:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  13 MAR 2026 18:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -824,51 +824,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 19.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 19.
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-[]|\OT1/cmr/m/n/10.95 1.8% (Y1),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-\OT1/cmr/m/n/10.95 1.6% (Y2),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
-[]|\OT1/cmr/m/n/10.95 2,000 (Y1)
- []
-
-
-Underfull \hbox (badness 1028) in paragraph at lines 31--31
-\OT1/cmr/m/n/10.95 down to 1,167
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
-[]|\OT1/cmr/m/n/10.95 One-time on-board-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--34
-[]|\OT1/cmr/m/n/10.95 180k, 220k,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--34
-\OT1/cmr/m/n/10.95 280k, 350k,
- []
-
-
-Overfull \hbox (7.81584pt too wide) in alignment at lines 23--36
- [] [] [] 
- []
-
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 40.
+(Font)              <10.95> on input line 31.
 
-Overfull \hbox (10.62804pt too wide) in paragraph at lines 40--51
- [] 
+Underfull \hbox (badness 1231) in paragraph at lines 38--39
+[]|\OT1/cmr/m/n/10.95 Unlocks larger clinic group con-
  []
 
 
@@ -876,59 +836,109 @@ Overfull \hbox (10.62804pt too wide) in paragraph at lines 40--51
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package pgfplots info on input line 68: Using 'lua backend=false' for axis: x c
-oord trafo unsupported.
+Underfull \hbox (badness 2277) in paragraph at lines 72--73
+[]|\OT1/cmr/m/n/10.95 Backend plat-form, ML sys-tems,
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
-[]|\OT1/cmr/bx/n/10.95 Price (per
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+[]|\OT1/cmr/m/n/10.95 Clinical val-i-da-tion,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+\OT1/cmr/m/n/10.95 PHIPA/PIPEDA con-trols, au-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
+[]|\OT1/cmr/m/n/10.95 Go-to-Market and Cus-
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 74--75
+[]|\OT1/cmr/m/n/10.95 Sales pipeline, part-ner chan-nels,
  []
 
 
 
 [2]
-Package pgfplots info on input line 135: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
-
-
-[3]
-Overfull \hbox (14.98254pt too wide) in paragraph at lines 197--211
+Overfull \hbox (34.57074pt too wide) in paragraph at lines 100--115
  [] 
  []
 
-Package pgfplots info on input line 248: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 1389) in paragraph at lines 128--129
+[]|\OT1/cmr/m/n/10.95 AI scribe mar-ket com-monly in low hun-dreds per
+ []
+
+
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+[]|\OT1/cmr/bx/n/10.95 Price (per
+ []
+
+
+Overfull \hbox (10.62804pt too wide) in paragraph at lines 166--177
+ [] 
+ []
 
 
 
 [4]
-Package pgfplots info on input line 287: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
-Package pgfplots info on input line 310: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-Package pgfplots info on input line 332: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
-[]|\OT1/cmr/m/n/10.95 -1.06M, -1.23M, -0.87M, +0.77M,
+Overfull \hbox (23.5748pt too wide) in paragraph at lines 184--195
+ [] 
  []
+
+Package pgfplots info on input line 250: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
 [5]
+Package pgfplots info on input line 276: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+Package pgfplots info on input line 301: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
 
-[6{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package pgfplots info on input line 324: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[6]
+Package pgfplots info on input line 347: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[7{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }]
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
+[]|\OT1/cmr/m/n/10.95 0.235M, 0.888M, 2.719M, 6.868M,
+ []
 
-[7] (./railguard_financial_model.aux)
+
+Underfull \hbox (badness 7704) in paragraph at lines 383--384
+[]|\OT1/cmr/m/n/10.95 -1.060M, -1.230M, -0.874M, 0.770M,
+ []
+
+
+
+[8]
+
+[9] (./railguard_financial_model.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -938,13 +948,13 @@ ed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34043 strings out of 473190
- 844941 string characters out of 5715801
- 1310291 words of memory out of 5000000
- 56818 multiletter control sequences out of 15000+600000
- 564210 words of font info for 54 fonts, out of 8000000 for 9000
+ 33996 strings out of 473190
+ 843784 string characters out of 5715801
+ 1307358 words of memory out of 5000000
+ 56761 multiletter control sequences out of 15000+600000
+ 564863 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,19n,105p,738b,2311s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,19n,105p,738b,2335s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -952,12 +962,13 @@ Here is how much of TeX's memory you used:
 sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
 /local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
 ocal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/loc
-al/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on railguard_financial_model.pdf (7 pages, 148186 bytes).
+cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loc
+al/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/loca
+l/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on railguard_financial_model.pdf (9 pages, 165155 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
- 26 named destinations out of 1000 (max. 500000)
+ 140 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
